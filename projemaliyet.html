@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <title>Hakkımızda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8344314c31.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="social">
+    <font>MK MİMARLIK | <span>Architekt der Zukunft..</span> </font>
+    
+    <i class="fas fa-search"></i>
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-google"></i>
+    
+    </div>
+    
+    <div id="container">
+        <header>
+        <img  
+        id="headerResim" src="img/zenci.jpg"img alt="">
+        <div id="centered">Merve Keser Mimarlık</div>
+        </header>
+        
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i>Anasayfa</a></li>
+                    <li><a href="hakkimizda.html"><i class="fas fa-users"></i>Hakkımızda</a></li>
+                    <li><a href="referanslar.html"><i class="fas fa-asterisk"></i>Referanslar</a></li>
+                    <li><a href="galeri.html"><i class="fas fa-images"></i>Galeri</a></li>
+                    <li><a href="iletisim.html"><i class="fas fa-address-book"></i>İletişim</a></li>
+                    <li><a href="projemaliyet.html"><i class="fas fa-money-bill"></i>Proje Maliyet</a></li>
+                    <li><a href="hesapmakinasi.html"><i class="fas fa-calculator"></i>Hesap Makinası</a></li>
+                    <li><a href="oyun.html"><i class="fas fa-gamepad"></i>Oyun</a></li>
+                </ul>
+            </nav>
+             <main>
+            <h1>Proje Maliyet Hesaplama</h1>                   
+<script type="text/javascript">
+    function hesapla(){
+        var mlt, bina;
+        pa = parseFloat(document.getElementById('pa').value);
+        ba = parseFloat(document.getElementById('ba').value);
+        kt = parseFloat(document.getElementById('kt').value);
+        mlt=(pa*2*(1-ba)*kt);
+
+        if (mlt>=1000000)
+            bina='Ultra Lüks';
+        else if (mlt>=750000 && mlt<100000)
+            bina='Lüks';
+        else if (mlt>00 && mlt<=749999)
+            bina='Standart';
+        document.getElementById('txtmlt').value=mlt;
+        document.getElementById('txtbina').value=bina;
+    }
+</script>
+<body>
+<form>
+    Proje İnşaat Alanını Giriniz(m2):<input type="text" name="pa" id="pa"><br/>
+    Benzer Blok Adedinin Toplam Blok Adedine Oranını Giriniz(örn:0.33),Eğer Bina Tek Katlı İse 0 Giriniz:<input type="text" name="ba" id="ba"><br/>
+    Konut için(1),Müstakil Villa için(2),Hastane,Otel vb. Yapılar İçin(3) Giriniz:<input type="text" name="kt" id="kt"><br/>
+    Toplam Maliyet(M2) :<input type="text" name="txtmlt" id="txtmlt"><br/>
+    Yapı Sınıfı :<input type="text" name="txtbina" id="txtbina"><br/>
+    <input type="button" onclick="hesapla();" value="Hesapla"/>
+</form>
+</body>
+</main>
+</section>
+<footer>Tüm Hakları Saklıdır &copy; | 2023 </footer>
+</div>
+</body>
+</html>
